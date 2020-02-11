@@ -4,11 +4,6 @@
 //
 
 export const twoFer = (name) => {
-  if (!name || name === 'undefined' || name === '' || name === null) {
-    return `One for you, one for me.`
+  return (name ? `One for ${name}, one for me.` : `One for you, one for me.`)
   }
-  else if (name) {
-    return `One for ${name}, one for me.`
-  }
-}
-
+  
