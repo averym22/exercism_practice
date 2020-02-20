@@ -5,13 +5,9 @@
 
 const COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
 
-export const decodedValue = (arr) => {
-  arr.length = 2
-  let resistorValue = ""
-  for (let i = 0; i < arr.length; i++) {
-    resistorValue += COLORS.indexOf((arr[i]));
-  }
-  return Number(resistorValue)
+export const decodedValue = ([color1, color2]) => {
+
+  return COLORS.indexOf(color1)*10 + COLORS.indexOf(color2);
 };
 
 
