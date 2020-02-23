@@ -3,23 +3,17 @@
 // convenience to get you started writing code faster.
 //
 
+let matrix = 
+{
+  'G':'C',
+  'C':'G',
+  'T':'A',
+  'A':'U'
+}
+
 export const toRna = (dna) => {
-  let rna = ''
-  for (let letter of dna) {
-    if (letter === 'A') {
-      rna += 'U'
-    }
-    else if (letter === 'T') {
-      rna += 'A'
-    }
-    else if (letter === 'G') {
-      rna += 'C'
-    }
-    else if (letter === 'C') {
-      rna += 'G'
-    } else {
-      rna += ''
-    }
-  }
- return rna
+  return dna.split('')
+  .map((val) =>  matrix[val])
+  .join('')
+  
 };
